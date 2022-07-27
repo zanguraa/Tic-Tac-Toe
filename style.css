@@ -422,3 +422,45 @@ h5 {
     color: #1A2A33;
     border: none;
 }
+
+.player-1-win {
+    display: none;
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    height: 9.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-2-win {
+    display: none;
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    height: 9.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.round-tied {
+    display: none;
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    height: 9.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
