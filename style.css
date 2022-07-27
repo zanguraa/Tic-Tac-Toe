@@ -34,7 +34,7 @@ styles for new game starts here
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 20px;
     text-align: center;
     letter-spacing: 1px;
@@ -122,6 +122,7 @@ styles for new game starts here
     letter-spacing: 1px;
     color: #1A2A33;
     padding: 14px 76px 22px 74px;
+    border: none;
 }
 
 .game-vs-cpu {
@@ -138,6 +139,7 @@ styles for new game starts here
     color: #1A2A33;
     padding: 14px 71px 22px 60px;
     margin-top: 16px;
+    border: none;
 }
 
 /*
@@ -226,7 +228,7 @@ styles for new game ends here
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 25px;
     text-align: center;
     letter-spacing: 1.25px;
@@ -271,7 +273,7 @@ background: #F2B137;
     justify-content: space-between;
 }
 
-h5 {
+.player-o-win h5 {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
@@ -283,17 +285,17 @@ h5 {
     text-transform: uppercase;
 }
 
-.img-player-0-win {
+.img-player-o-win {
     display: flex;
     justify-content: space-between;
 }
 
-.img-player-0-win img {
+.img-player-o-win img {
     height: 1.875rem;
     margin-right: 1rem;
 }
 
-.img-player-0-win h2 {
+.img-player-o-win h2 {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
@@ -301,6 +303,37 @@ h5 {
     line-height: 30px;
     letter-spacing: 1.5px;
     color: #F2B137;
+}
+
+.img-player-x-win {
+    display: flex;
+}
+
+.player-x-win h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    text-transform: uppercase;
+}
+
+.img-player-x-win img {
+    width: 1.75rem;
+    margin-right: 1rem;
+}
+
+.img-player-x-win h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 1.5px;
+    color: #31C3BD;
 }
 
 .button-quit {
@@ -352,18 +385,6 @@ h5 {
     justify-content: space-between;
 }
 
-/* h5 {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    letter-spacing: 0.875px;
-    color: #A8BFC9;
-    text-transform: uppercase;
-} */
-
 .restart-game {
     display: none;
     position: absolute;
@@ -382,23 +403,29 @@ h5 {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     text-align: center;
     letter-spacing: 1.5px;
     color: #A8BFC9;
 }
 
+.button-div {
+    display: flex;
+    align-items: center;
+}
+
 .button-cancel {
     background: #A8BFC9;
+    width: 9rem;
     height: 3.25rem;
     box-shadow: inset 0px -4px 0px #6B8997;
     border-radius: 10px;
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-align: center;
     letter-spacing: 1px;
     color: #1A2A33;
@@ -437,6 +464,37 @@ h5 {
     justify-content: space-between;
 }
 
+.player-1-win h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+}
+
+.img-player-1-win {
+    display: flex;
+    align-items: center;
+}
+
+.img-player-1-win img {
+    width: 1.875rem;
+    margin-right: 1rem;
+}
+
+.img-player-1-win h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 1.5px;
+    color: #F2B137;
+}
+
 .player-2-win {
     display: none;
     position: absolute;
@@ -451,6 +509,37 @@ h5 {
     justify-content: space-between;
 }
 
+.player-2-win h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+}
+
+.img-player-2-win {
+    display: flex;
+    align-items: center;
+}
+
+.img-player-2-win img {
+    width: 1.875rem;
+    margin-right: 1rem;
+}
+
+.img-player-2-win h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 1.5px;
+    color: #F2B137;
+}
+
 .round-tied {
     display: none;
     position: absolute;
@@ -462,5 +551,404 @@ h5 {
     padding: 40px 0px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+.round-tied h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.875rem;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #A8BFC9;
+}
+
+.button-quit-tied {
+        background: #A8BFC9;
+        width: 5rem;
+        height: 3.25rem;
+        box-shadow: inset 0px -4px 0px #6b8997;
+        border-radius: 10px;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #1A2A33;
+        border: none;
+        margin-right: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #new-game {
+        display: block;
+    }
+    
+    .new-game-menu {
+        text-align: center;
+        margin: 14.128rem 9.625rem;
+    }
+
+    .choose-xo {
+        margin: 3rem 0;
+    }
+
+    .game-vs-player {
+        width: 28.6rem;
+        background: #F2B137;
+        box-shadow: inset 0px -8px 0px #cc8b13;
+        border-radius: 15px;
+        font-family: 'Outfit';
+        font-style: normal;
+        border: none;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #1A2A33;
+        padding: 14px 76px 22px 74px;
+    }
+
+    .game-vs-cpu {
+        width: 28.6rem;
+        background: #31C3BD;
+        box-shadow: inset 0px -8px 0px #118c87;
+        border-radius: 15px;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        border: none;
+        color: #1A2A33;
+        padding: 14px 39px 22px 60px;
+        margin-top: 16px;
+    }
+
+    #game-board {
+        display: block;
+        padding: 12.563rem 9.625rem;
+    }
+
+    .turn-button {
+        display: flex;
+        height: 3.25rem;
+        background: #1F3641;
+        box-shadow: inset 0px -4px 0px #10212a;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.875px;
+        color: #A8BFC9;
+        border: none;
+        width: 8.5rem;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    h5 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #A8BFC9;
+    }
+
+    .game-box {
+        width: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .game-box img {
+        height: 4rem;
+    }
+
+   
+    .your-score {
+        width: 8.75rem;
+        
+    }
+
+    .ties {
+        width: 8.75rem;
+    }
+
+    .cpu-score {
+        width: 8.75rem;
+    }
+
+    .score-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .player-o-win {
+        display: none;
+        position: absolute;
+        top: 81%;
+        width: 100%;
+        height: 11.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 44px 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .player-o-win h5 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #A8BFC9;
+    }
+
+    .img-player-o-win {
+        display: flex;
+        justify-content: space-between;
+        /* margin-top: 1.438rem; */
+        align-items: center;
+    }
+
+   .img-player-o-win h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+   }
+
+    .img-player-o-win img {
+        height: 4rem;
+        margin-right: 1rem;
+    }
+
+    .img-player-o-win h2 {
+        font-size: 2.5rem;
+    }
+
+    .player-x-win {
+        display: none;
+        position: absolute;
+        top: 81%;
+        width: 100%;
+        height: 11.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 44px 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .player-x-win h5 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        text-align: center;
+        letter-spacing: 1.875px;
+        color: #A8BFC9;
+        text-transform: uppercase;
+    }
+
+    .img-player-x-win {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.438rem;
+        align-items: center;
+    }
+
+    .img-player-x-win img {
+        width: 4rem;
+        margin-right: 1rem;
+    }
+
+    .img-player-x-win h2 {
+        font-size: 2.5rem;
+    }
+
+    .restart-game {
+        display: none;
+        position: absolute;
+        top: 79%;
+        width: 100%;
+        height: 8.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 4rem 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .restart-game h2 {
+        font-size: 2.5rem;
+        line-height: 1.875rem;
+        margin-bottom: 1.938rem;
+    }
+
+    .player-1-win {
+        display: none;
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        height: 11.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 40px 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .player-1-win h5 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #A8BFC9;
+    }
+
+    .img-player-1-win {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -0.562rem;
+        align-items: center;
+    }
+
+    .img-player-1-win h2 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.875rem;
+        letter-spacing: 1.5px;
+        color: #F2B137;
+    }
+
+    .img-player-1-win img {
+        width: 4rem;
+        margin-right: 1rem;
+    }
+
+    .player-2-win {
+        display: none;
+        position: absolute;
+        top: 81%;
+        width: 100%;
+        height: 11.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 2.5rem 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .img-player-2-win {
+        display: flex;
+        justify-content: space-between;
+        /* margin-top: 1.438rem; */
+        align-items: center;
+    }
+
+    .img-player-2-win h2 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.875rem;
+        letter-spacing: 1.5px;
+        color:  #31C3BD;
+    }
+
+    .player-2-win h5 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #A8BFC9;
+    }
+
+    .img-player-2-win img {
+        width: 4rem;
+        margin-right: 1rem;
+    }
+
+    .round-tied {
+        display: none;
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        height: 8.25rem;
+        background: #1F3641;
+        /* display: flex; */
+        padding: 68px 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+   .round-tied h2 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 3.125rem;
+        text-align: center;
+        letter-spacing: 2.5px;
+        color: #A8BFC9;
+
+   }
+
+   .button-cancel {
+        background: #A8BFC9;
+        width: 9rem;
+        height: 3.25rem;
+        box-shadow: inset 0px -4px 0px #6b8997;
+        border-radius: 10px;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #1A2A33;
+        border: none;
+        margin-right: 1rem;
+   }
+}
+
