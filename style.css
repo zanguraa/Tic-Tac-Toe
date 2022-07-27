@@ -1,0 +1,424 @@
+body {
+    background: #1A2A33;
+    align-items: center;
+    height: 100vh;
+}
+
+/*
+styles for new game starts here
+*/
+
+#new-game {
+    display: none;
+}
+
+.new-game-menu {
+    text-align: center;
+    margin: 7.438rem 1.5rem;
+}   
+
+.choose-xo {
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.choose-xo h3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #A8BFC9;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.choose-xo h4 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-top: 1.063rem;
+}
+
+.xo-images-choose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.438rem;
+    padding: 9px 8px;
+    margin: 0px 24px;
+    background: #1A2A33;
+    border-radius: 10px;
+}
+
+.img-sizes {
+    height: 2rem;
+    margin: 11px 50px;
+}
+
+.img-x-o {
+    height: 2rem;
+}
+
+.img-x-hidden {
+    display: none;
+}
+
+.img-o-hidden {
+    display: none;
+}
+
+.for-x:hover {
+    background: #A8BFC9;
+    border-radius: 10px;
+}
+.for-x:hover .img-x-hidden {
+    display: block;
+}
+
+.for-x:hover .img-x-show {
+    display: none;
+}
+
+.for-o:hover {
+    background: #A8BFC9;
+    border-radius: 10px;
+}
+.for-o:hover .img-o-hidden {
+    display: block;
+}
+
+.for-o:hover .img-o-show {
+    display: none;
+}
+
+.game-vs-player {
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #cc8b13;
+    border-radius: 15px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    padding: 14px 76px 22px 74px;
+}
+
+.game-vs-cpu {
+    background: #31C3BD;
+    box-shadow: inset 0px -8px 0px #118c87;
+    border-radius: 15px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    padding: 14px 71px 22px 60px;
+    margin-top: 16px;
+}
+
+/*
+styles for new game ends here
+////////////////////////////////////////////////////////////////////////////////////
+*/
+#game-board {
+    display: block;
+    padding: 23px;
+}
+
+.turn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.turn-button {
+    display: flex;
+    height: 40px;
+    background: #1F3641;
+    box-shadow: inset 0px -4px 0px #10212a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    border: none;
+    width: 96px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.x-for-turn {
+    height: 1rem;
+}
+
+.turn-img {
+    height: 2.5rem;
+}
+/* this is styles for game blocks  */
+.game-box {
+    width: 6rem;
+    height: 6rem;
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-box img {
+    height: 2.5rem;
+}
+
+.game-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.score-container h4 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #1A2A33;
+}
+
+.score-container h3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #1A2A33;
+}
+
+.your-score {
+    background: #31C3BD;
+    border-radius: 10px;
+    width: 6rem;
+    height: 3.25rem;
+    padding-top: 0.75rem;
+}
+
+.ties {
+    background: #A8BFC9;
+    border-radius: 10px;
+    width: 6rem;
+    height: 3.25rem;
+    padding-top: 0.75rem;
+}
+
+.cpu-score {
+background: #F2B137;
+    border-radius: 10px;
+    width: 6rem;
+    height: 3.25rem;
+    padding-top: 0.75rem;
+}
+
+.player-o-win {
+    display: none;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 9.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    text-transform: uppercase;
+}
+
+.img-player-0-win {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-player-0-win img {
+    height: 1.875rem;
+    margin-right: 1rem;
+}
+
+.img-player-0-win h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: #F2B137;
+}
+
+.button-quit {
+    background: #A8BFC9;
+    width: 4.75rem;
+    height: 3.25rem;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    border: none;
+    margin-right: 1rem;
+}
+
+.button-next-round {
+    background: #F2B137;
+    width: 9.125rem;
+    height: 3.25rem;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    border: none;
+}
+
+.player-x-win {
+    display: none;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 9.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    text-transform: uppercase;
+} */
+
+.restart-game {
+    display: none;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    height: 6.25rem;
+    background: #1F3641;
+    /* display: flex; */
+    padding: 64px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restart-game h2 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #A8BFC9;
+}
+
+.button-cancel {
+    background: #A8BFC9;
+    height: 3.25rem;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    border: none;
+    margin-right: 1rem;
+}
+
+.button-restart {
+    background: #F2B137;
+    width: 9.125rem;
+    height: 3.25rem;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    border: none;
+}

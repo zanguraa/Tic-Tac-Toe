@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+
+  <!-- New game menu start -->
+  <section id="new-game" class="new-game-menu">
+    <div class="xo-images">
+      <img class="img-x-o" src="./assets/icon-x.svg" alt="icon-x">
+      <img class="img-x-o" src="./assets/icon-o.svg" alt="icon-o">    
+    </div>
+    <div class="choose-xo">
+      <h3>Pick player 1's mark</h3>
+      <div class="xo-images-choose">
+        <div class="for-x">
+          <img class="img-x-o img-x-show img-sizes" src="./assets/icon-x-silver.svg" alt="icon-x-silver">
+          <img class="img-x-o img-sizes img-x-hidden" src="./assets/icon-x-blue.svg" alt="icon-x-blue"> 
+        </div>
+        <div class="for-o">
+          <img class="img-x-o img-o-show img-sizes"  src="./assets/icon-o-silver.svg" alt="icon-o-silver">
+          <img class="img-x-o  img-sizes img-o-hidden"  src="./assets/icon-o-blue.svg" alt="icon-o-blue">
+        </div>
+      </div>
+        <h4>Remember: X goes first</h4>
+    </div>
+     <button class="game-vs-player">New Game (vs CPU)</button> 
+     <button class="game-vs-cpu">New Game (vs player)</button> 
+  </section>
+  <!-- New game menu end -->
+
+  <!-- Game board start -->
+<section id="game-board">
+  <!-- x/o icon -->
+  <div class="turn-container">
+    <div class="turn-img-container">
+      <img class="img-x-o" src="./assets/icon-x.svg" alt="icon-x.svg">
+      <img class="img-x-o" src="./assets/icon-o.svg" alt="icon-o.svg">
+    </div>
+    <button class="turn-button"><img class="x-for-turn" src="./assets/icon-x-silver.svg" alt=""> turn</button>
+    <div class="restart-icon">
+      <img class="turn-img" src="./assets/turn.png" alt="turn.png">
+    </div>
+  </div> 
+  <div class="game-area">
+    <div class="game-box" id="game-1">
+      
+    </div>
+    <div class="game-box" id="game-2">
+      <img src="./assets/icon-x.svg" alt="icon-x">
+    </div>
+    <div class="game-box" id="game-3">
+      <img src="./assets/icon-o.svg" alt="icon-o">
+    </div>
+    <div class="game-box" id="game-4"></div>
+    <div class="game-box" id="game-5"></div>
+    <div class="game-box" id="game-6"></div>
+    <div class="game-box" id="game-7"></div>
+    <div class="game-box" id="game-8"></div>
+    <div class="game-box" id="game-9"></div>
+  </div>
+  <div class="score-container">
+    <div class="your-score"> 
+      <h4>X (YOU)</h4>
+      <h3 class="your-score-count">14</h3>
+    </div>  <!-- Your score -->
+    <div class="ties">
+      <h4>TIES 9!</h4>
+      <h3 class="tie-score-count">32</h3>
+    </div>
+    <div class="cpu-score">
+      <h4>X (CPU)</h4>
+      <h3 class="cpu-score-count">11</h3>
+    </div>
+  </div> -- Ties score -->
+   <!-- CPU score -->
+</section>
+
+<section id="game-resultat">
+<!-- player 0 win -->
+  <div class="player-o-win">
+    <h5>Oh no, you lost...</h5>
+    <div class="img-player-0-win">
+      <img src="./assets/icon-o.svg" alt="icon-o">
+      <h2>TAKES THE ROUND</h2>
+    </div>
+    <div>
+      <button class="button-quit">QUIT</button>
+      <button class="button-next-round">NEXT ROUND</button>
+    </div>
+    
+  </div>
+
+  <!-- player X win -->
+  <div class="player-x-win">
+    <h5>you won!</h5>
+    <div class="img-player-0-win">
+      <img src="./assets/icon-x.svg" alt="icon-x">
+      <h2>TAKES THE ROUND</h2>
+    </div>
+    <div>
+      <button class="button-quit">QUIT</button>
+      <button class="button-next-round">NEXT ROUND</button>
+    </div>
+  </div>
+
+<!-- Restart the game -->
+  <div class="restart-game">
+    <h2>RESTART GAME?</h2>
+    <div>
+      <button class="button-cancel">NO, CANCEL</button>
+      <button class="button-restart">YES, RESTART</button>
+    </div>
+  </div>
+
+  <!-- player 1 win -->
+  <div class="player-1-win">
+    <h5>PLAYER 1 WINS!</h5>
+    <div class="img-player-0-win">
+      <img src="./assets/icon-o.svg" alt="icon-o">
+      <h2>TAKES THE ROUND</h2>
+    </div>
+    <div>
+      <button class="button-quit">QUIT</button>
+      <button class="button-next-round">NEXT ROUND</button>
+    </div>
+  </div>
+
+  <!-- player 2 wins -->
+    <div class="player-2-win">
+      <h5>PLAYER 2 WINS!</h5>
+      <div class="img-player-0-win">
+        <img src="./assets/icon-x.svg" alt="icon-x">
+        <h2>TAKES THE ROUND</h2>
+      </div>
+      <div>
+        <button class="button-quit">QUIT</button>
+        <button class="button-next-round">NEXT ROUND</button>
+      </div>
+    </div>
+
+    <!-- round tied -->
+    <div class="round tied">
+      <h2>ROUND TIED</h2>
+      <div>
+        <button class="button-cancel">QUIT</button>
+        <button class="button-restart">NEXT, ROUND</button>
+      </div>
+    </div>
+  <!-- Game board end -->
+</section>
+</body>
+</html>
