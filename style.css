@@ -125,6 +125,12 @@ styles for new game starts here
     border: none;
 }
 
+.game-vs-player:hover {
+    background: #FFC860;
+    box-shadow: inset 0px -8px 0px #cc8b13;
+    border-radius: 15px;
+}
+
 .game-vs-cpu {
     background: #31C3BD;
     box-shadow: inset 0px -8px 0px #118c87;
@@ -140,6 +146,12 @@ styles for new game starts here
     padding: 14px 71px 22px 60px;
     margin-top: 16px;
     border: none;
+}
+
+.game-vs-cpu:hover {
+    background: #65E9E4;
+    box-shadow: inset 0px -8px 0px #118C87;
+    border-radius: 15px;
 }
 
 /*
@@ -952,3 +964,77 @@ background: #F2B137;
    }
 }
 
+@media screen and (min-width: 1440px) {
+    #new-game {
+        display: flex;
+        /* margin: 15rem 30rem; */
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose-xo {
+        margin: 3rem 0;
+        width: 28.75rem;
+    }
+
+    #game-board {
+        display: flex;
+        height: 100vh;
+        /* padding: 12.563rem; */
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .turn-container {
+        display: flex;
+        width: 28.5rem;
+        justify-content: space-between;
+        margin-bottom: 1.188rem;
+    }
+    .turn-button {
+        margin-left: -31px;
+        
+    }
+
+    .game-area {
+        display: flex;
+        width: 28.75rem;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        justify-content: center;
+    }
+
+    .score-container {
+        display: flex;
+        width: 28.75rem;
+        justify-content: space-between;
+        margin-top: 1.25rem;
+    }
+
+    .player-o-win {
+        display: none; 
+        top: 54%;
+        padding: 43px 0px;
+    }
+
+    .player-x-win {
+        height: 11.25rem;
+        display: none;
+        top: 54%;
+        padding: 43px 0px;
+    }
+
+    .restart-game {
+        height: 11.25rem;
+        display: none;
+        top: 54%;
+        padding: 43px 0px;
+    }
+
+    .player-1-win {
+        display: none;
+        top: 54%;
+        padding: 43px 0px;
+    }
+
+}
