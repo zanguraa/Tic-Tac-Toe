@@ -9,7 +9,7 @@ styles for new game starts here
 */
 
 #new-game {
-    display: none;
+    display: block;
 }
 
 .new-game-menu {
@@ -154,12 +154,26 @@ styles for new game starts here
     border-radius: 15px;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
 /*
 styles for new game ends here
 ////////////////////////////////////////////////////////////////////////////////////
 */
 #game-board {
-    display: block;
+    display: none;
+    flex-direction: column;
     padding: 23px;
 }
 
@@ -194,6 +208,10 @@ styles for new game ends here
     height: 1rem;
 }
 
+#turn-o {
+    display: none;
+}
+
 .turn-img {
     height: 2.5rem;
 }
@@ -207,6 +225,19 @@ styles for new game ends here
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.game-box-hover-x {
+    background-image: url(./assets/icon-x-outline.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+   
+}
+
+.game-box-hover-o {
+    background-image: url(./assets/icon-o-outline.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 .game-box img {
@@ -274,6 +305,7 @@ background: #F2B137;
 .player-o-win {
     display: none;
     position: absolute;
+    z-index: 101;
     top: 40%;
     width: 100%;
     height: 9.25rem;
@@ -366,6 +398,12 @@ background: #F2B137;
     margin-right: 1rem;
 }
 
+.button-quit:hover  {
+    background: #DBE8ED;
+    box-shadow: inset 0px -4px 0px #6b8997;
+    border-radius: 10px;
+}
+
 .button-next-round {
     background: #F2B137;
     width: 9.125rem;
@@ -383,11 +421,18 @@ background: #F2B137;
     border: none;
 }
 
+.button-next-round:hover {
+    background: #FFC860;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+}
+
 .player-x-win {
     display: none;
     position: absolute;
     top: 40%;
     width: 100%;
+    z-index: 101;
     height: 9.25rem;
     background: #1F3641;
     /* display: flex; */
@@ -402,6 +447,7 @@ background: #F2B137;
     position: absolute;
     top: 43%;
     width: 100%;
+    z-index: 101;
     height: 6.25rem;
     background: #1F3641;
     /* display: flex; */
@@ -468,6 +514,7 @@ background: #F2B137;
     top: 42%;
     width: 100%;
     height: 9.25rem;
+    z-index: 101;
     background: #1F3641;
     /* display: flex; */
     padding: 40px 0px;
@@ -512,6 +559,7 @@ background: #F2B137;
     position: absolute;
     top: 42%;
     width: 100%;
+    z-index: 101;
     height: 9.25rem;
     background: #1F3641;
     /* display: flex; */
@@ -558,6 +606,7 @@ background: #F2B137;
     top: 42%;
     width: 100%;
     height: 9.25rem;
+    z-index: 101;
     background: #1F3641;
     /* display: flex; */
     padding: 40px 0px;
@@ -594,6 +643,12 @@ background: #F2B137;
         color: #1A2A33;
         border: none;
         margin-right: 1rem;
+}
+
+.button-quit-tied:hover  {
+    background: #DBE8ED;
+    box-shadow: inset 0px -4px 0px #6b8997;
+    border-radius: 10px;
 }
 
 
@@ -648,7 +703,7 @@ background: #F2B137;
     }
 
     #game-board {
-        display: block;
+        display: none;
         padding: 12.563rem 9.625rem;
     }
 
@@ -714,7 +769,7 @@ background: #F2B137;
     .player-o-win {
         display: none;
         position: absolute;
-        top: 81%;
+        top: 61%;
         width: 100%;
         height: 11.25rem;
         background: #1F3641;
@@ -766,7 +821,7 @@ background: #F2B137;
     .player-x-win {
         display: none;
         position: absolute;
-        top: 81%;
+        top: 61%;
         width: 100%;
         height: 11.25rem;
         background: #1F3641;
@@ -808,7 +863,7 @@ background: #F2B137;
     .restart-game {
         display: none;
         position: absolute;
-        top: 79%;
+        top: 61%;
         width: 100%;
         height: 8.25rem;
         background: #1F3641;
@@ -828,7 +883,7 @@ background: #F2B137;
     .player-1-win {
         display: none;
         position: absolute;
-        top: 80%;
+        top: 61%;
         width: 100%;
         height: 11.25rem;
         background: #1F3641;
@@ -875,7 +930,7 @@ background: #F2B137;
     .player-2-win {
         display: none;
         position: absolute;
-        top: 81%;
+        top: 61%;
         width: 100%;
         height: 11.25rem;
         background: #1F3641;
@@ -922,7 +977,7 @@ background: #F2B137;
     .round-tied {
         display: none;
         position: absolute;
-        top: 80%;
+        top: 61%;
         width: 100%;
         height: 8.25rem;
         background: #1F3641;
@@ -965,9 +1020,12 @@ background: #F2B137;
 }
 
 @media screen and (min-width: 1440px) {
+    
+
+
     #new-game {
         display: flex;
-        /* margin: 15rem 30rem; */
+        margin: 13.438rem 1.5rem;
         flex-direction: column;
         align-items: center;
     }
@@ -977,9 +1035,9 @@ background: #F2B137;
     }
 
     #game-board {
-        display: flex;
+        display: none;
         height: 100vh;
-        /* padding: 12.563rem; */
+        padding: 0;
         flex-direction: column;
         align-content: center;
         align-items: center;
@@ -1013,27 +1071,39 @@ background: #F2B137;
 
     .player-o-win {
         display: none; 
-        top: 54%;
+        top:  35%;
         padding: 43px 0px;
     }
 
     .player-x-win {
         height: 11.25rem;
         display: none;
-        top: 54%;
+        top: 35%;
         padding: 43px 0px;
     }
 
     .restart-game {
         height: 11.25rem;
         display: none;
-        top: 54%;
+        top: 35%;
         padding: 43px 0px;
     }
 
     .player-1-win {
         display: none;
-        top: 54%;
+        top: 35%;
+        padding: 43px 0px;
+    }
+
+    .player-2-win {
+        display: none;
+        top: 35%;
+        padding: 43px 0px;
+    }
+
+    .round-tied {
+        display: none;
+        top: 35%;
         padding: 43px 0px;
     }
 
