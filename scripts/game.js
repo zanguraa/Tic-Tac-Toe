@@ -4,14 +4,33 @@ function startNewGame() {
     if(activePlayer !== null) {
     gameAreaElement.style.display = 'flex';
     newGameSection.style.display = 'none';
-    }
+    resetGameStatus();
+    currentRound = 1;
+    } 
 }
 
 //for using this function, you can choose your player
 function selectPlayer(select){
     activePlayer = select;
+    
 
+    if(activePlayer === 0) {
+        selectX.classList.add('forHover'); 
+        selectO.classList.remove('forHover');
+        yourScore.firstElementChild.textContent = 'X (YOU)'
+        cpuScore.firstElementChild.textContent = 'O (CPU)'
+
+    } 
+    if(activePlayer === 1) {
+        selectO.classList.add('forHover');
+        selectX.classList.remove('forHover');
+        yourScore.firstElementChild.textContent = 'X (CPU)'
+        cpuScore.firstElementChild.textContent = 'O (YOU)'
+    
+} 
+console.log(activePlayer);
 }
+
 
 //this function will switch players
 function switchPlayer() {
@@ -37,8 +56,10 @@ function selectGameField(event) {
     }
     if(activePlayer === 0) {
         selectedField.innerHTML = imgX;
+        selectedField.classList.add('game-box-hover-x');
     }else {
         selectedField.innerHTML = imgO;
+        // selectGameField.classList.add('game-box-hover-o')
     }
 
 const selectedColumn = selectedField.dataset.col - 1;
@@ -53,6 +74,7 @@ const selectedRow= selectedField.dataset.row - 1;
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
     const winnerId = checkForGameOver();
+    
 
     if (winnerId !== 0) {
         endGame(winnerId);
@@ -60,25 +82,29 @@ const selectedRow= selectedField.dataset.row - 1;
         if(winnerId === 1) {
             xWin.style.display ='flex';
             overlay.style.display = 'block';
+            xScore++;
+            yourScore.lastElementChild.textContent = xScore;
         }
         if (winnerId === 2) {
             oWin.style.display ='flex';
             overlay.style.display = 'block';
+            oScore++;
+            cpuScore.lastElementChild.textContent = oScore;
         } 
         if(winnerId === -1) {
             tied.style.display ='flex';
             overlay.style.display = 'block';
+             tieScore++;
+             tiesOver.lastElementChild.textContent = tieScore;
         }
     }
-
     currentRound = currentRound +1;
-
     switchPlayer();
-
 }
 
 //function for check who is winner
 function checkForGameOver() {
+    
     //checking the rows for equality
     for(let i = 0; i < 3; i ++) {
         if(gameData[i][0] > 0 &&
@@ -87,6 +113,7 @@ function checkForGameOver() {
             {
                 return gameData[i][0];
             }
+            
     }
     //checking for columns for equality
     for(let i = 0; i < 3; i ++) {
@@ -118,6 +145,7 @@ function checkForGameOver() {
     }
 
     return 0;
+    
 }
 
 
@@ -129,7 +157,27 @@ function endGame(winnerId) {
 
 
 
+function resetGameStatus() {
+
+    let gameBoardIndex = 0;
+    for(let i = 0; i < 3; i++) {
+        for(let j = 0; j < 3; j++) {
+            gameData[i][j] = 0;
+            gameBoardElement.children[gameBoardIndex].textContent = '';
+            gameBoardIndex++;
+        }
+    }
+}
 
 
+ function mouseMove(event){
+    hoverBox = event.target;;
+     if(activePlayer === 0) {
+        hoverBox.classList.add('game-box-hover-x');
+        onmouseout.hoverBox.classList.remove('game-box-hover-x');
+}else {
+        hoverBox.classList.add('game-box-hover-o')
+        onmouseout.hoverBox.classList.remove('game-box-hover-o');
+}
 
-
+ }

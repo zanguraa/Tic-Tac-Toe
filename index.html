@@ -6,6 +6,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
@@ -25,13 +28,15 @@
     <div class="choose-xo">
       <h3>Pick player 1's mark</h3>
       <div class="xo-images-choose">
-        <div onclick="selectPlayer(0)" class="for-x" >
-          <img class="img-x-o img-x-show img-sizes" src="./assets/icon-x-silver.svg" alt="icon-x-silver">
-          <img class="img-x-o img-sizes img-x-hidden" src="./assets/icon-x-blue.svg" alt="icon-x-blue"> 
+        <div onclick="selectPlayer(0)" class="for-x">
+           X
+          <!-- <img class="img-x-o img-x-show img-sizes" src="./assets/icon-x-silver.svg" alt="icon-x-silver">
+          <img class="img-x-o img-sizes img-x-hidden" src="./assets/icon-x-blue.svg" alt="icon-x-blue">  -->
         </div>
-        <div onclick="selectPlayer(0)" class="for-o">
-          <img class="img-x-o img-o-show img-sizes"  src="./assets/icon-o-silver.svg" alt="icon-o-silver">
-          <img class="img-x-o  img-sizes img-o-hidden"  src="./assets/icon-o-blue.svg" alt="icon-o-blue">
+        <div onclick="selectPlayer(1)" class="for-o">
+          O
+          <!-- <img class="img-x-o img-o-show img-sizes"  src="./assets/icon-o-silver.svg" alt="icon-o-silver">
+          <img class="img-x-o  img-sizes img-o-hidden"  src="./assets/icon-o-blue.svg" alt="icon-o-blue"> -->
         </div>
       </div>
         <h4>Remember: X goes first</h4>
@@ -59,32 +64,32 @@
       <img class="turn-img" src="./assets/turn.png" alt="turn.png">
     </div>
   </div> 
-  <ul  class="game-area">
-    <li class="game-box" data-col="1" data-row="1"></li>
-    <li class="game-box" data-col="2" data-row="1"></li>
-    <li class="game-box" data-col="3" data-row="1"></li>
-    <li class="game-box" data-col="1" data-row="2"></li>
-    <li class="game-box" data-col="2" data-row="2"></li>
-    <li class="game-box" data-col="3" data-row="2"></li>
-    <li class="game-box" data-col="1" data-row="3"></li>
-    <li class="game-box" data-col="2" data-row="3"></li>
-    <li class="game-box" data-col="3" data-row="3"></li>
+  <ul  class="game-area" >
+    <li class="game-box" data-col="1" data-row="1" onmousemove="mouseMove(event)" onmouseout=""></li>
+    <li class="game-box" data-col="2" data-row="1" onmousemove="mouseMove(event)"></li>
+    <li class="game-box" data-col="3" data-row="1" onmousemove="mouseMove(event)"></li>
+    <li class="game-box" data-col="1" data-row="2" onmousemove=""></li>
+    <li class="game-box" data-col="2" data-row="2" onmousemove=""></li>
+    <li class="game-box" data-col="3" data-row="2" onmousemove=""></li>
+    <li class="game-box" data-col="1" data-row="3" onmousemove=""></li>
+    <li class="game-box" data-col="2" data-row="3" onmousemove=""></li>
+    <li class="game-box" data-col="3" data-row="3" onmousemove=""></li>
   </ul>
   <div class="score-container">
     <!-- Your score -->
     <div class="your-score"> 
       <h4>X (YOU)</h4>
-      <h3 class="your-score-count">14</h3>
+      <h3 class="your-score-count">0</h3>
     </div>  
     <!-- Ties score -->
     <div class="ties">
       <h4>TIES</h4>
-      <h3 class="tie-score-count">32</h3>
+      <h3 class="tie-score-count">0</h3>
     </div>
     <!-- CPU score -->
     <div class="cpu-score">
-      <h4>X (CPU)</h4>
-      <h3 class="cpu-score-count">11</h3>
+      <h4>O (CPU)</h4>
+      <h3 class="cpu-score-count">0</h3>
     </div>
   </div> 
 </section>

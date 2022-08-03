@@ -68,6 +68,54 @@ styles for new game starts here
     border-radius: 10px;
 }
 
+.for-x {
+    align-items: center;
+    width: 12.4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40.3px;
+    line-height: 32px;
+    letter-spacing: 2.5px;
+    color: #A8BFC9;
+    transition: 0.3s
+}
+
+.for-x-hover {
+    background: rgba(168, 191, 201, 0.05);
+    border-radius: 10px;
+}
+
+.for-o {
+    align-items: center;
+    width: 12.4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40.3px;
+    line-height: 32px;
+    letter-spacing: 2.5px;
+    color: #A8BFC9;
+    transition: 0.3s
+}
+
+.forHover {
+    background: #A8BFC9;
+    border-radius: 10px;
+    color: #1A2A33;
+}
+
+.for-o-hover {
+    background: rgba(168, 191, 201, 0.05);
+    border-radius: 10px;
+}
+
 .img-sizes {
     height: 2rem;
     margin: 11px 50px;
@@ -75,38 +123,6 @@ styles for new game starts here
 
 .img-x-o {
     height: 2rem;
-}
-
-.img-x-hidden {
-    display: none;
-}
-
-.img-o-hidden {
-    display: none;
-}
-
-.for-x:hover {
-    background: #A8BFC9;
-    border-radius: 10px;
-}
-.for-x:hover .img-x-hidden {
-    display: block;
-}
-
-.for-x:hover .img-x-show {
-    display: none;
-}
-
-.for-o:hover {
-    background: #A8BFC9;
-    border-radius: 10px;
-}
-.for-o:hover .img-o-hidden {
-    display: block;
-}
-
-.for-o:hover .img-o-show {
-    display: none;
 }
 
 .game-vs-player {
@@ -315,6 +331,7 @@ background: #F2B137;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: 0.3s
 }
 
 .player-o-win h5 {
@@ -665,6 +682,17 @@ background: #F2B137;
 
     .choose-xo {
         margin: 3rem 0;
+    }
+
+    .xo-images-choose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24.438rem;
+        padding: 9px 8px;
+        margin: 0px 24px;
+        background: #1A2A33;
+        border-radius: 10px;
     }
 
     .game-vs-player {

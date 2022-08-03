@@ -2,8 +2,8 @@ const startNewGameBtnElement = document.getElementById('new-game-vs-player');
 const gameAreaElement = document.getElementById('game-board');
 const newGameSection = document.getElementById('new-game');
 const gameFieldElements = document.querySelectorAll('.game-area li');
-const activeBox = document.getElementsByClassName('game-box');
-const gameBoardElement = document.getElementsByClassName("game-area");
+const activeBox = document.querySelector('.game-box');
+const gameBoardElement = document.querySelector(".game-area");
 const gameResult = document.getElementById('game-resultat'); 
 const xWin = document.getElementById("playerx");
 const oWin = document.getElementById("playero");
@@ -15,8 +15,28 @@ const overlay = document.querySelector(".overlay");
 const cancelButton = document.querySelector(".button-cancel")
 const quitButton = document.querySelectorAll(".button-quit");
 const tiedQuitButton = document.querySelector('.button-quit-tied');
+const selectX = document.querySelector(".for-x");
+const selectO = document.querySelector(".for-o");
+const hoverClass = document.querySelector(".for-x:hover");
+const yourScore = document.querySelector('.your-score');
+const cpuScore = document.querySelector('.cpu-score');
+const nextRound = document.querySelectorAll('.button-next-round');
+const roundTiedNext = document.querySelector('.round-tied').lastElementChild.lastElementChild;
+const tiesOver = document.querySelector('.ties');
+
+
+let xScore = 0;
+let oScore = 0;
+let tieScore = 0;
+
+console.log(roundTiedNext);
+const winCount = 0;
+
+
+
 
 startNewGameBtnElement.addEventListener('click', startNewGame);
+
 
 let activePlayer = null;
 let currentRound = 1;
@@ -51,8 +71,6 @@ restartYes.addEventListener('click', ()=> {
 })
 
 //for buttons QUIT
-console.log(tiedQuitButton);
-
     quitButton[0].addEventListener('click', ()=> {
         window.location.reload();
     })
@@ -70,3 +88,24 @@ console.log(tiedQuitButton);
         window.location.reload();
     })
 
+//for next round button 
+nextRound[0].addEventListener('click', ()=> {
+    startNewGame();
+    oWin.style.display = 'none'
+    overlay.style.display = 'none';
+    
+})
+
+nextRound[1].addEventListener('click', ()=> {
+    startNewGame();
+    xWin.style.display = 'none'
+    overlay.style.display = 'none';
+    
+})
+
+roundTiedNext.addEventListener('click', ()=> {
+    startNewGame();
+    tied.style.display = 'none'
+    overlay.style.display = 'none';
+    
+})
