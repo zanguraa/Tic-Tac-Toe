@@ -1,8 +1,8 @@
-
 //function for start new game
 function startNewGame() {
     // selectPlayer(0);
     if(activePlayer !== null) {
+        
         gameAreaElement.style.display = 'flex';
         newGameSection.style.display = 'none';
         resetGameStatus();
@@ -41,7 +41,6 @@ function startNewGame() {
 //for using this function, you can choose your player
 function selectPlayer(select){
     activePlayer = select;
-    
 
     if(activePlayer === 0) {
         selectX.classList.add('forHover'); 
@@ -58,10 +57,8 @@ function selectPlayer(select){
         yourScore.firstElementChild.textContent = 'X (CPU)';
         cpuScore.firstElementChild.textContent = 'O (YOU)';
         document.getElementById("turn-o").style.display = "inline";
-        document.getElementById("turn-x").style.display = "none";
-    
+        document.getElementById("turn-x").style.display = "none";   
 }
-console.log(activePlayer);
 }
 
 
@@ -78,8 +75,6 @@ function switchPlayer() {
         document.getElementById("turn-o").style.display = "none"
         document.getElementById("turn-x").style.display = "inline"
     }
-
-
 }
 
 function CPU_Move() {
@@ -110,7 +105,7 @@ function selectGameField(event) {
     }
     if(activePlayer === 0) {
         selectedField.innerHTML = imgX;
-        selectedField.classList.add('game-box-hover-x');
+        // selectedField.classList.add('game-box-hover-x');
     }else {
         selectedField.innerHTML = imgO;
         // selectGameField.classList.add('game-box-hover-o')
@@ -203,8 +198,7 @@ function checkForGameOver() {
         return -1;
     }
 
-    return 0;
-    
+    return 0; 
 }
 
 
@@ -212,8 +206,6 @@ function endGame(winnerId) {
 
     gameResult.style.display ='block';
 }
-
-
 
 
 function resetGameStatus() {

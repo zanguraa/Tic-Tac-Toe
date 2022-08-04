@@ -192,6 +192,9 @@ styles for new game ends here
     display: none;
     flex-direction: column;
     padding: 23px;
+    /* display: flex; */
+    margin: auto;
+    max-width: 20.625rem;
 }
 
 .turn-container {
@@ -242,19 +245,6 @@ styles for new game ends here
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.game-box-hover-x {
-    background-image: url(./assets/icon-x-outline.svg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-   
-}
-
-.game-box-hover-o {
-    background-image: url(./assets/icon-o-outline.svg);
-    background-repeat: no-repeat;
-    background-position: 50%;
 }
 
 .game-box img {
@@ -669,6 +659,36 @@ background: #F2B137;
     border-radius: 10px;
 }
 
+/* @media screen and (min-width: 500px) {
+    .turn-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 64px;
+        width: 77%;
+        margin-left: 52px;
+    }
+
+    .game-area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 77%;
+        justify-content: center;
+        margin-left: 54px;
+    }
+
+    .score-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 77%;
+        margin-left: 52px;
+    }
+
+
+} */
+
+
 
 @media screen and (min-width: 768px) {
 
@@ -734,6 +754,8 @@ background: #F2B137;
     #game-board {
         display: none;
         padding: 12.563rem 9.625rem;
+        max-width: 28.75rem;
+        margin: auto;
     }
 
     .turn-button {
@@ -781,6 +803,19 @@ background: #F2B137;
     .your-score {
         width: 8.75rem;
         
+    }
+
+    .game-box-hover-x {
+        background-image: url(./assets/icon-x-outline.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+       
+    }
+    
+    .game-box-hover-o {
+        background-image: url(./assets/icon-o-outline.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
     }
 
     .ties {

@@ -23,7 +23,7 @@ const cpuScore = document.querySelector('.cpu-score');
 const nextRound = document.querySelectorAll('.button-next-round');
 const roundTiedNext = document.querySelector('.round-tied').lastElementChild.lastElementChild;
 const tiesOver = document.querySelector('.ties');
-
+const gameVsCPU = document.getElementById('new-game-cs-cpu');
 
 let xScore = 0;
 let oScore = 0;
@@ -36,6 +36,9 @@ const winCount = 0;
 
 startNewGameBtnElement.addEventListener('click', startNewGame);
 
+gameVsCPU.addEventListener('click', ()=> {
+    alert("game mode will be available soon");
+})
 
 let activePlayer = null;
 let currentRound = 1;
