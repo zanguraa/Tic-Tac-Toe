@@ -69,6 +69,7 @@ styles for new game starts here
 }
 
 .for-x {
+    cursor: pointer;
     align-items: center;
     width: 12.4rem;
     height: 3rem;
@@ -84,12 +85,17 @@ styles for new game starts here
     transition: 0.3s
 }
 
-.for-x-hover {
+.for-x:hover, .for-o:hover  {
     background: rgba(168, 191, 201, 0.05);
     border-radius: 10px;
 }
 
+.forHover:hover {
+    background: #A8BFC9;
+}
+
 .for-o {
+    cursor: pointer;
     align-items: center;
     width: 12.4rem;
     height: 3rem;
@@ -109,11 +115,6 @@ styles for new game starts here
     background: #A8BFC9;
     border-radius: 10px;
     color: #1A2A33;
-}
-
-.for-o-hover {
-    background: rgba(168, 191, 201, 0.05);
-    border-radius: 10px;
 }
 
 .img-sizes {

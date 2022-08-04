@@ -1,12 +1,41 @@
 
 //function for start new game
 function startNewGame() {
+    // selectPlayer(0);
     if(activePlayer !== null) {
-    gameAreaElement.style.display = 'flex';
-    newGameSection.style.display = 'none';
-    resetGameStatus();
-    currentRound = 1;
+        gameAreaElement.style.display = 'flex';
+        newGameSection.style.display = 'none';
+        resetGameStatus();
+        currentRound = 1;
     } 
+
+    gameFieldElements.forEach((field) => {
+
+        if (field.classList.contains("game-box-hover-x")) {
+            field.classList.remove("game-box-hover-x");
+        } else if (field.classList.contains("game-box-hover-o")) {
+            field.classList.remove("game-box-hover-o");
+        }
+
+        field.addEventListener("mousemove", () => {
+          if (field.children.length == 0) {
+              if (activePlayer === 0) {
+                field.classList.add("game-box-hover-x");
+              } else {
+                field.classList.add("game-box-hover-o");
+              }
+          }
+        });
+        field.addEventListener("mouseout", () => {
+          if (field.children.length == 0) {
+              if (activePlayer === 0) {
+              field.classList.remove("game-box-hover-x");
+              } else {
+              field.classList.remove("game-box-hover-o");
+              }
+          }
+        });
+      });
 }
 
 //for using this function, you can choose your player
@@ -17,23 +46,28 @@ function selectPlayer(select){
     if(activePlayer === 0) {
         selectX.classList.add('forHover'); 
         selectO.classList.remove('forHover');
-        yourScore.firstElementChild.textContent = 'X (YOU)'
-        cpuScore.firstElementChild.textContent = 'O (CPU)'
+        yourScore.firstElementChild.textContent = 'X (YOU)';
+        cpuScore.firstElementChild.textContent = 'O (CPU)';
+        document.getElementById("turn-o").style.display = "none";
+        document.getElementById("turn-x").style.display = "inline";
 
     } 
     if(activePlayer === 1) {
         selectO.classList.add('forHover');
         selectX.classList.remove('forHover');
-        yourScore.firstElementChild.textContent = 'X (CPU)'
-        cpuScore.firstElementChild.textContent = 'O (YOU)'
+        yourScore.firstElementChild.textContent = 'X (CPU)';
+        cpuScore.firstElementChild.textContent = 'O (YOU)';
+        document.getElementById("turn-o").style.display = "inline";
+        document.getElementById("turn-x").style.display = "none";
     
-} 
+}
 console.log(activePlayer);
 }
 
 
 //this function will switch players
 function switchPlayer() {
+
     if(activePlayer === 0) {
         activePlayer = 1;
         document.getElementById("turn-o").style.display = "inline"
@@ -45,6 +79,26 @@ function switchPlayer() {
         document.getElementById("turn-x").style.display = "inline"
     }
 
+
+}
+
+function CPU_Move() {
+    console.warn('hereee', gameFieldElements)
+    for (let i = 0; i < gameData.length; i++) {
+        console.warn(gameData[i], i, gameData[i].indexOf(0), (i*3)+gameData[i].indexOf(0))
+        if (gameData[i].indexOf(0) >= 0) {
+            if (gameFieldElements[(i*3)+gameData[i].indexOf(0)].children.length == 0) {
+
+                gameFieldElements[(i*3)+gameData[i].indexOf(0)].innerHTML = imgO;
+
+                gameData[i][gameData[i].indexOf(0)] = activePlayer + 1;
+                switchPlayer();
+                showWin(checkForGameOver());
+                currentRound = currentRound +1;
+                return;
+            }
+        }
+    }
 
 }
 
@@ -73,7 +127,14 @@ const selectedRow= selectedField.dataset.row - 1;
 
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
-    const winnerId = checkForGameOver();
+    showWin(checkForGameOver());
+    currentRound = currentRound +1;
+    
+    switchPlayer();
+    // CPU_Move();
+}
+
+function showWin(winnerId) {
     
 
     if (winnerId !== 0) {
@@ -98,8 +159,6 @@ const selectedRow= selectedField.dataset.row - 1;
              tiesOver.lastElementChild.textContent = tieScore;
         }
     }
-    currentRound = currentRound +1;
-    switchPlayer();
 }
 
 //function for check who is winner
@@ -170,14 +229,3 @@ function resetGameStatus() {
 }
 
 
- function mouseMove(event){
-    hoverBox = event.target;;
-     if(activePlayer === 0) {
-        hoverBox.classList.add('game-box-hover-x');
-        onmouseout.hoverBox.classList.remove('game-box-hover-x');
-}else {
-        hoverBox.classList.add('game-box-hover-o')
-        onmouseout.hoverBox.classList.remove('game-box-hover-o');
-}
-
- }

@@ -34,7 +34,6 @@ const winCount = 0;
 
 
 
-
 startNewGameBtnElement.addEventListener('click', startNewGame);
 
 
